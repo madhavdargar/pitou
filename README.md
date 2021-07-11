@@ -23,7 +23,7 @@ Things Pitou is able to do currently:
 1. Tell you what time is it right now.
 2. Search something on Google 
 3. Search something on YouTube
-4. Search Price of something
+4. Search Stock Price
 5. Tell you about the current Weather
 6. Can play Rock Paper Scissors with you
 7. Toss a Coin
