@@ -107,7 +107,7 @@ def respond(voice_data):
         else:
             hours = time[0]
         minutes = time[1]
-        time = hours + " hours and " + minutes + "minutes"
+        time = hours + " hours and " + minutes + " minutes"
         engine_speak(time)
 
     # search google
@@ -116,8 +116,7 @@ def respond(voice_data):
         url = "https://google.com/search?q=" + search_term
         webbrowser.get().open(url)
         engine_speak("Here is what I found for " + search_term + " on google")
-
-    if there_exists(["search"]) and 'youtube' not in voice_data:
+    elif there_exists(["search"]) and 'youtube' not in voice_data:
         search_term = voice_data.replace("search", "")
         url = "https://google.com/search?q=" + search_term
         webbrowser.get().open(url)
@@ -155,7 +154,6 @@ def respond(voice_data):
 
         engine_speak("The computer chose " + cmove)
         engine_speak("You chose " + pmove)
-        # engine_speak("hi")
         if pmove == cmove:
             engine_speak("the match is draw")
         elif pmove == "rock" and cmove == "scissor":
@@ -206,7 +204,7 @@ def respond(voice_data):
         engine_speak(f"You must be somewhere in {loc}")
 
     # Current location as per Google maps
-    if there_exists(["what is my exact location"]):
+    if there_exists(["what is my exact location","location"]):
         url = "https://www.google.com/maps/search/Where+am+I+?/"
         webbrowser.get().open(url)
         engine_speak("You must be somewhere near here, as per Google maps")
