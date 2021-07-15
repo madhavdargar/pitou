@@ -132,7 +132,7 @@ def respond(voice_data):
 
     # get price
     if there_exists(["price of"]):
-        search_term = voice_data.split("for")[-1]
+        search_term = voice_data.split("of")[-1]
         url = "https://google.com/search?q=" + search_term
         webbrowser.get().open(url)
         engine_speak("Here is what I found for " + search_term + " on google")
